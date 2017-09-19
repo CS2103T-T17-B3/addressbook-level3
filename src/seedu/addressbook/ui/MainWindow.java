@@ -280,5 +280,11 @@ public class MainWindow {
 
     }
 
+    @FXML
+    private void handleDelete() throws Exception {
+        String getIndexInput = commandInput.getText();
+        CommandResult result = logic.execute(DeleteCommand.COMMAND_WORD + " " + getIndexInput);
+        displayResult(result);
+    }
 
 }
